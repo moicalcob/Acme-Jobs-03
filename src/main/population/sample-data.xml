@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- - sample-data.xml - - Copyright (c) 2019 Rafael Corchuelo. - - In keeping with the traditional purpose of furthering education and 
+	research, it is - the policy of the copyright owner to permit non-commercial use and redistribution of - this software. It has been tested 
+	carefully, but it is not guaranteed for any particular - purposes. The copyright owner does not offer any warranties or representations, 
+	nor do - they accept any liabilities with respect to them. -->
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<import resource="conversion-service.xml" />
+	<!-- Requests -->
+	<bean id="request01" class="acme.entities.requests.Request">
+		<property name="title" value="Web request" />
+		<property name="moment" value="2019/06/10 11:39" />
+		<property name="deadline" value="2020/05/23 00:00" />
+		<property name="text" value="Request for the deployment of a new web page" />
+		<property name="reward" value="2000" />
+		<property name="ticker" value="RASDF-12345" />
+	</bean>
+
+	<bean id="request02" class="acme.entities.requests.Request">
+		<property name="title" value="Comercial request" />
+		<property name="moment" value="2019/03/13 21:47" />
+		<property name="deadline" value="2019/12/28 03:09" />
+		<property name="text" value="Request for sending 50 packages via mail" />
+		<property name="reward" value="1400" />
+		<property name="ticker" value="RGHJK-67890" />
+	</bean>
+
+	<bean id="request03" class="acme.entities.requests.Request">
+		<property name="title" value="Storage request" />
+		<property name="moment" value="2018/10/10 18:20" />
+		<property name="deadline" value="2020/01/01 13:00" />
+		<property name="text" value="Request for the creation of a new database" />
+		<property name="reward" value="3600" />
+		<property name="ticker" value="RLZXC-52684" />
+	</bean>
+	
+	<!-- Offers -->
+	<bean id="offer01" class="acme.entities.offers.Offer">
+		<property name="ticker" value="OXXXX-99999" />
+		<property name="title" value="Offer of books" />
+		<property name="moment" value="2019/02/10 10:45" />
+		<property name="deadline" value="2029/04/20 12:45" />
+		<property name="description" value="Offer of books for 50% discount" />	
+		<property name="reward" value="300.0" />
+	</bean>
+	
+	<bean id="offer02" class="acme.entities.offers.Offer">
+		<property name="ticker" value="OAXXX-99999" />
+		<property name="title" value="Offer of food" />
+		<property name="moment" value="2019/03/20 10:45" />
+		<property name="deadline" value="2029/04/12 14:45" />
+		<property name="description" value="Food offer for the first home deliverys" />	
+		<property name="reward" value="200.50" />
+	</bean>
+
+
+
+	<!-- Announcements -->
+	<bean id="announcement01" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Repositories announcement" />
+		<property name="moment" value="2019/06/10 10:35" />
+		<property name="moreInfo" value="http://www.github.com" />
+		<property name="text" value="Now you can create your own repository" />
+	</bean>
+  
+	<bean id="announcement02" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Glasses announcement" />
+		<property name="moment" value="2019/06/10 00:00" />
+		<property name="moreInfo" value=""/>
+		<property name="text" value="Buying 2 we give you some sunglasses" />
+	</bean>
+
+	<bean id="announcement03" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Social announcement" />
+		<property name="moment" value="1900/10/10 19:10" />
+		<property name="moreInfo" value="http://www.twitter.com" />
+		<property name="text" value="Enjoy the most popular social network" />
+	</bean>
+	
+	<bean id="announcement04" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Laptop announcement" />
+		<property name="moment" value="2019/10/10 10:35" />
+		<property name="moreInfo" value="http://www.ev.us.es" />
+		<property name="text" value="All our computers at a 10% discount" />
+	</bean>
+	
+	<bean id="announcement05" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Doors announcement" />
+		<property name="moment" value="2019/11/01 10:35" />
+		<property name="moreInfo" value="" />
+		<property name="text" value="This is an announcement of doors" />
+	</bean>
+
+  	<!-- Challenges -->
+	<bean id="challenge01" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Video challenge" />
+		<property name="deadline" value="2019/11/26 12:45" />
+		<property name="description" value="This is the description of a simple challenge" />
+		<property name="goldGoal" value="High quality video" />
+		<property name="goldReward" value="200 EUR" />
+		<property name="silverGoal" value="Medium quality video" />
+		<property name="silverReward" value="100 EUR" />
+		<property name="bronzeGoal" value="Low quality video" />
+		<property name="bronzeReward" value="50 EUR" />
+	</bean>
+
+	<bean id="challenge02" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Food challenge" />
+		<property name="deadline" value="2020/01/09 13:00" />
+		<property name="description" value="This is the description of a medium challenge" />
+		<property name="goldGoal" value="Eat 5 dishes of food" />
+		<property name="goldReward" value="350 EUR" />
+		<property name="silverGoal" value="Eat 4 dishes of food" />
+		<property name="silverReward" value="200 EUR" />
+		<property name="bronzeGoal" value="Eat 3 dishes of food" />
+		<property name="bronzeReward" value="150.50 EUR" />
+	</bean>
+
+	<bean id="challenge03" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Musical challenge" />
+		<property name="deadline" value="2020/01/17 21:30" />
+		<property name="description" value="This is the description of a difficult challenge" />
+		<property name="goldGoal" value="Get 10K views" />
+		<property name="goldReward" value="500 EUR" />
+		<property name="silverGoal" value="Get 5K views" />
+		<property name="silverReward" value="220.65 EUR" />
+		<property name="bronzeGoal" value="Get 2K views" />
+		<property name="bronzeReward" value="100.78 EUR" />
+	</bean>
+	
+	<!-- Commercial banners -->
+	<bean id="commercialBanner01" class="acme.entities.banners.CommercialBanner">
+		<property name="picture" value="https://www.dropbox.com/s/octzjafxaqk6r0p/bannercomm.jpg?dl=0"/>
+		<property name="slogan" value="Commercial banner 1"/>
+		<property name="target" value="http://www.example.com/"/>
+		<property name="creditCard" value="123456789"/>
+	</bean>
+	
+	<bean id="commercialBanner02" class="acme.entities.banners.CommercialBanner">
+		<property name="picture" value="https://www.dropbox.com/s/octzjafxaqk6r0p/bannercomm.jpg?dl=0"/>
+		<property name="slogan" value="Commercial banner 2"/>
+		<property name="target" value="http://www.example.com/"/>
+		<property name="creditCard" value="123456789"/>
+	</bean>
+	
+	<bean id="commercialBanner03" class="acme.entities.banners.CommercialBanner">
+		<property name="picture" value="https://www.dropbox.com/s/octzjafxaqk6r0p/bannercomm.jpg?dl=0"/>
+		<property name="slogan" value="Commercial banner 3"/>
+		<property name="target" value="http://www.example.com/"/>
+		<property name="creditCard" value="123456789"/>
+	</bean>
+	
+	<!-- Non commercial banners -->
+	<bean id="nonCommercialBanner01" class="acme.entities.banners.NonCommercialBanner">
+		<property name="picture" value="https://www.dropbox.com/s/3v9re7u51qap0s0/bannernoncomm.jpg"/>
+		<property name="slogan" value="Non commercial banner 1"/>
+		<property name="target" value="http://www.example.com/"/>
+		<property name="jingle" value="https://www.dropbox.com/s/58dds8plb13pl63/Keywoo-Jingle.mp3"/>
+	</bean>
+	
+	<bean id="nonCommercialBanner02" class="acme.entities.banners.NonCommercialBanner">
+		<property name="picture" value="https://www.dropbox.com/s/3v9re7u51qap0s0/bannernoncomm.jpg"/>
+		<property name="slogan" value="Non commercial banner 2"/>
+		<property name="target" value="http://www.example.com/"/>
+		<property name="jingle" value="https://www.dropbox.com/s/58dds8plb13pl63/Keywoo-Jingle.mp3"/>
+	</bean>
+	
+	<bean id="nonCommercialBanner03" class="acme.entities.banners.NonCommercialBanner">
+		<property name="picture" value="https://www.dropbox.com/s/3v9re7u51qap0s0/bannernoncomm.jpg"/>
+		<property name="slogan" value="Non commercial banner 3"/>
+		<property name="target" value="http://www.example.com/"/>
+		<property name="jingle" value="https://www.dropbox.com/s/t5hdokera5zxy29/Tesla-Jingle.mp3"/>
+	</bean>
+
+	<!-- Investor records -->
+	
+	<bean id="investorRecord001" class="acme.entities.investor_records.InvestorRecord">
+		<property name="investorName" value="Industry" />
+		<property name="sector" value="Industrial" />
+		<property name="statement" value="We are interesting in tech development" />
+		<property name="stars" value="4.0" />
+	</bean>
+	
+	<bean id="investorRecord002" class="acme.entities.investor_records.InvestorRecord">
+		<property name="investorName" value="Jobbing" />
+		<property name="sector" value="Laboral" />
+		<property name="statement" value="We would like to invest in new jobs" />
+		<property name="stars" value="4.5" />
+	</bean>
+	
+	<bean id="investorRecord003" class="acme.entities.investor_records.InvestorRecord">
+		<property name="investorName" value="YourMusic" />
+		<property name="sector" value="Musical" />
+		<property name="statement" value="We are interesting in new artists" />
+		<property name="stars" value="5.0" />
+	</bean>
+	
+	<bean id="investorRecord004" class="acme.entities.investor_records.InvestorRecord">
+		<property name="investorName" value="AllMusic" />
+		<property name="sector" value="Musical" />
+		<property name="statement" value="Our interest is focused on the record companies" />
+		<property name="stars" value="3.9" />
+	</bean>
+	
+	<!-- Spam Words -->
+	
+	<bean id="spamWord01" class="acme.entities.spam_words.SpamWord">
+		<property name="spanishTranslation" value="sexo" />
+		<property name="englishTranslation" value="sex" />
+		<property name="spamThreshold" value="1.0" />
+	</bean>
+	
+	<bean id="spamWord02" class="acme.entities.spam_words.SpamWord">
+		<property name="spanishTranslation" value="hard core" />
+		<property name="englishTranslation" value="hard core" />
+		<property name="spamThreshold" value="1.0" />
+	</bean>
+
+	<bean id="spamWord03" class="acme.entities.spam_words.SpamWord">
+		<property name="spanishTranslation" value="viagra" />
+		<property name="englishTranslation" value="viagra" />
+		<property name="spamThreshold" value="1.0" />
+	</bean>
+	
+	<bean id="spamWord04" class="acme.entities.spam_words.SpamWord">
+		<property name="spanishTranslation" value="cialis" />
+		<property name="englishTranslation" value="cialis" />
+		<property name="spamThreshold" value="1.0" />
+	</bean>
+	
+	<bean id="spamWord05" class="acme.entities.spam_words.SpamWord">
+		<property name="spanishTranslation" value="nigeria" />
+		<property name="englishTranslation" value="nigeria" />
+		<property name="spamThreshold" value="1.0" />
+	</bean>
+	
+	<bean id="spamWord06" class="acme.entities.spam_words.SpamWord">
+		<property name="spanishTranslation" value="has ganado" />
+		<property name="englishTranslation" value="you´ve won" />
+		<property name="spamThreshold" value="1.0" />
+	</bean>
+	
+	<bean id="spamWord07" class="acme.entities.spam_words.SpamWord">
+		<property name="spanishTranslation" value="millón de dólares" />
+		<property name="englishTranslation" value="million dollar" />
+		<property name="spamThreshold" value="1.0" />
+	</bean>
+  
+    <!-- Company records -->
+    
+  	<bean id="record01" class="acme.entities.company_records.CompanyRecord">
+		<property name="name" value="New Music"/>
+		<property name="sector" value="Musical sector"/>
+		<property name="ceoName" value="Mark"/>
+		<property name="description" value="Company for the music industry"/>
+		<property name="webSite" value="http://www.youtube.com"/>
+		<property name="phone" value="+1 (13) 123456"/>
+		<property name="email" value="markevans@gmail.com"/>
+		<property name="incorporated" value="false"/>
+		<property name="stars" value="0.0"/>
+	</bean>
+	
+	<bean id="record02" class="acme.entities.company_records.CompanyRecord">
+		<property name="name" value="Sheet metal company"/>
+		<property name="sector" value="Industrial sector"/>
+		<property name="ceoName" value="Carlos"/>
+		<property name="description" value="Company focused on sheet metal manufacturing"/>
+		<property name="webSite" value="http://www.sheetmetal.com"/>
+		<property name="phone" value="+12 (12) 1234567"/>
+		<property name="email" value="carloscasado10@gmail.com"/>
+		<property name="incorporated" value="false"/>
+		<property name="stars" value="0.0"/>
+	</bean>
+	
+	<bean id="record03" class="acme.entities.company_records.CompanyRecord">
+		<property name="name" value="RealS"/>
+		<property name="sector" value="Real estate"/>
+		<property name="ceoName" value="Eliot"/>
+		<property name="description" value="Expert company in the real estate sector"/>
+		<property name="webSite" value="http://www.realstatesec.com"/>
+		<property name="phone" value="+123 (123) 12345678"/>
+		<property name="email" value="eliotem@gmail.com"/>
+		<property name="incorporated" value="true"/>
+		<property name="stars" value="0.0"/>
+	</bean>
+	
+	<bean id="record04" class="acme.entities.company_records.CompanyRecord">
+		<property name="name" value="Fooder"/>
+		<property name="sector" value="Food sector"/>
+		<property name="ceoName" value="Fran"/>
+		<property name="description" value="Vacuum packed food company"/>
+		<property name="webSite" value="http://www.foodcompany.com"/>
+		<property name="phone" value="+100 (9999) 1234567392"/>
+		<property name="email" value="fran1999@gmail.com"/>
+		<property name="incorporated" value="true"/>
+		<property name="stars" value="5.0"/>
+	</bean>
+</beans>

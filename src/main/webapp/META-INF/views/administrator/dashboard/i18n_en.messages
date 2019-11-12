@@ -1,0 +1,13 @@
+administrator.dashboard.form.label.totalNumberOfAnnouncement = Total number of announcements
+administrator.dashboard.form.label.totalNumberOfCompanyRecords = Total number of company records
+administrator.dashboard.form.label.totalNumberOfInvestorRecords = Total number of investor records
+administrator.dashboard.form.label.minimumOfRewardsRequests = Minimum of rewards requests
+administrator.dashboard.form.label.maximumOfRewardsRequests = Maximum of rewards requests
+administrator.dashboard.form.label.averageOfRewardsRequests = Average of rewards requests
+administrator.dashboard.form.label.standardDeviationOfRewardsRequests = Standard deviation of rewards requests
+administrator.dashboard.form.label.minimumOfRewardsOffers = Minimum of rewards offers
+administrator.dashboard.form.label.maximumOfRewardsOffers = Maximum of rewards offers
+administrator.dashboard.form.label.averageOfRewardsOffers = Average of rewards offers
+administrator.dashboard.form.label.standardDeviationOfRewardsOffers = Standard deviation of rewards offers
+administrator.dashboard.form.label.firstChart = Number of companies per sector
+administrator.dashboard.form.label.secondChart = Number of investors per sector
