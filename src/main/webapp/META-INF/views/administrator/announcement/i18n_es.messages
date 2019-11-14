@@ -16,6 +16,5 @@ administrator.announcement.form.label.moment = Fecha:
 administrator.announcement.form.label.moreInfo = Mas informacion:
 administrator.announcement.form.label.text = Texto:
 administrator.announcement.form.button.return = Volver
-administrator.announcement.form.button.create = Crear
 administrator.announcement.form.button.update = Actualizar
 administrator.announcement.form.button.delete = Eliminar
