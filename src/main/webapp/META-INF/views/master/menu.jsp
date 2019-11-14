@@ -32,8 +32,10 @@
 			<acme:menu-suboption code="master.menu.administrator.announcements" action="/administrator/announcement/list" />
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show" />
 			<acme:menu-suboption code="master.menu.administrator.spam-words" action="/administrator/spam-word/list" />
-			<acme:menu-suboption code="master.menu.administrator.banners" action="/administrator/commercial-banner/list" />
-			<acme:menu-suboption code="master.menu.administrator.banners.create" action="/administrator/commercial-banner/create" />
+			<acme:menu-suboption code="master.menu.administrator.banners.commercial-banner" action="/administrator/commercial-banner/list" />
+			<acme:menu-suboption code="master.menu.administrator.banners.commercial-banner.create" action="/administrator/commercial-banner/create" />
+			<acme:menu-suboption code="master.menu.administrator.banners.non-commercial-banner" action="/administrator/non-commercial-banner/list" />
+			<acme:menu-suboption code="master.menu.administrator.banners.non-commercial-banner.create" action="/administrator/non-commercial-banner/create" />
 			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown" />
 		</acme:menu-option>

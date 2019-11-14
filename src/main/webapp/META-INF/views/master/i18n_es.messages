@@ -55,8 +55,10 @@ master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.announcements = Todos los anuncios
 master.menu.administrator.spam-words = Palabras spam
-master.menu.administrator.banners = Banners comerciales
-master.menu.administrator.banners.create = Crear banner comercial
+master.menu.administrator.banners.commercial-banner = Banners comerciales
+master.menu.administrator.banners.commercial-banner.create = Crear banner comercial
+master.menu.administrator.banners.non-commercial-banner = Banners no comerciales
+master.menu.administrator.banners.non-commercial-banner.create = Crear banner no comercial
 master.menu.administrator.shutdown = Parar el sistema
 
 # master.menu.provider ########################################################
