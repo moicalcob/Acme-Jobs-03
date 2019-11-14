@@ -54,6 +54,7 @@ master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.announcements = Todos los anuncios
+master.menu.administrator.announcements.create = Crear anuncios
 master.menu.administrator.spam-words = Palabras spam
 master.menu.administrator.shutdown = Parar el sistema
 
