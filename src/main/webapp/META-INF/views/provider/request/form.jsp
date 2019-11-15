@@ -3,6 +3,10 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
+	<jstl:if test="${command == 'create'}">
+	<h2>CREANDO</h2>
+	</jstl:if>
+
 <acme:form>
 	<acme:form-textbox code="provider.request.form.label.title" path="title" />
 	<jstl:if test="${command != 'create'}">
@@ -13,7 +17,7 @@
 	<acme:form-integer code="provider.request.form.label.reward" path="reward" />
 	<acme:form-textarea code="provider.request.form.label.ticker" path="ticker" />
 
-	<acme:form-submit test="${command == 'create'}" 
+	<acme:form-submit 
 		code="provider.request.form.button.create" 
 		action="/provider/request/create"/>
 	<acme:form-return code="provider.request.form.button.return" />
