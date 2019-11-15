@@ -5,19 +5,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.requests.Request;
+import acme.entities.roles.Provider;
 import acme.framework.components.Model;
-import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class ProviderRequestShowService implements AbstractShowService<Authenticated, Request> {
+public class ProviderRequestShowService implements AbstractShowService<Provider, Request> {
 
 	//Internal state
 	@Autowired
 	private ProviderRequestRepository repository;
 
 
-	//AbstractShowService<Authenticated, Request> interface
+	//AbstractShowService<Provider, Request> interface
 	@Override
 	public boolean authorise(final acme.framework.components.Request<Request> request) {
 		assert request != null;

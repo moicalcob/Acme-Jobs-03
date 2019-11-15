@@ -7,12 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.requests.Request;
+import acme.entities.roles.Provider;
 import acme.framework.components.Model;
-import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class ProviderRequestListService implements AbstractListService<Authenticated, Request> {
+public class ProviderRequestListService implements AbstractListService<Provider, Request> {
 
 	//Internal state
 	@Autowired

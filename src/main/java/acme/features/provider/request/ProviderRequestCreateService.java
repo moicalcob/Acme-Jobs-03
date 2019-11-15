@@ -6,32 +6,30 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.features.authenticated.request.AuthenticatedRequestRepository;
+import acme.entities.requests.Request;
+import acme.entities.roles.Provider;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
-import acme.framework.components.Request;
-import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractCreateService;
 
 @Service
-public class ProviderRequestCreateService implements AbstractCreateService<Authenticated, acme.entities.requests.Request> {
+public class ProviderRequestCreateService implements AbstractCreateService<Provider, Request> {
 
 	//Internal state ------------------------------------------------------------
-
 	@Autowired
-	private AuthenticatedRequestRepository repository;
+	private ProviderRequestRepository repository;
 
 
-	//AbstractCreateService<Authenticated, Request> interface --------------
+	//AbstractCreateService<Provider, Request> interface --------------
 
 	@Override
-	public boolean authorise(final Request<acme.entities.requests.Request> request) {
+	public boolean authorise(final acme.framework.components.Request<Request> request) {
 		assert request != null;
 		return true;
 	}
 
 	@Override
-	public void bind(final acme.framework.components.Request<acme.entities.requests.Request> request, final acme.entities.requests.Request entity, final Errors errors) {
+	public void bind(final acme.framework.components.Request<Request> request, final Request entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -40,7 +38,7 @@ public class ProviderRequestCreateService implements AbstractCreateService<Authe
 	}
 
 	@Override
-	public void unbind(final acme.framework.components.Request<acme.entities.requests.Request> request, final acme.entities.requests.Request entity, final Model model) {
+	public void unbind(final acme.framework.components.Request<Request> request, final Request entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -49,16 +47,16 @@ public class ProviderRequestCreateService implements AbstractCreateService<Authe
 	}
 
 	@Override
-	public acme.entities.requests.Request instantiate(final acme.framework.components.Request<acme.entities.requests.Request> request) {
-		acme.entities.requests.Request result;
+	public Request instantiate(final acme.framework.components.Request<Request> request) {
+		Request result;
 
-		result = new acme.entities.requests.Request();
+		result = new Request();
 
 		return result;
 	}
 
 	@Override
-	public void validate(final acme.framework.components.Request<acme.entities.requests.Request> request, final acme.entities.requests.Request entity, final Errors errors) {
+	public void validate(final acme.framework.components.Request<Request> request, final Request entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -66,7 +64,7 @@ public class ProviderRequestCreateService implements AbstractCreateService<Authe
 	}
 
 	@Override
-	public void create(final acme.framework.components.Request<acme.entities.requests.Request> request, final acme.entities.requests.Request entity) {
+	public void create(final acme.framework.components.Request<Request> request, final Request entity) {
 		Date moment;
 
 		moment = new Date(System.currentTimeMillis() - 1);

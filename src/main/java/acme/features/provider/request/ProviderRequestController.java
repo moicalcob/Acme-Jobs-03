@@ -8,13 +8,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import acme.entities.requests.Request;
+import acme.entities.roles.Provider;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
-import acme.framework.entities.Authenticated;
 
 @Controller
 @RequestMapping("/provider/request/")
-public class ProviderRequestController extends AbstractController<Authenticated, Request> {
+public class ProviderRequestController extends AbstractController<Provider, Request> {
 
 	//Internal state
 	@Autowired
