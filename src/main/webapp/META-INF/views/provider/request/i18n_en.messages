@@ -10,4 +10,8 @@ provider.request.form.label.reward = Reward:
 provider.request.form.label.ticker = Ticker:
 
 provider.request.form.button.create = Create
+provider.request.form.button.update = Update
+provider.request.form.button.delete = Delete
 provider.request.form.button.return = Return
+
+provider.request.form.error.sticker = A request with this sticker already exists

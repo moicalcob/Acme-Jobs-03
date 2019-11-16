@@ -10,4 +10,8 @@ provider.request.form.label.reward = Recompensa:
 provider.request.form.label.ticker = Ticker:
 
 provider.request.form.button.create = Crear
+provider.request.form.button.update = Actualizar
+provider.request.form.button.delete = Eliminar
 provider.request.form.button.return = Volver
+
+provider.request.form.error.sticker = Ya existe una solicitud con este sticker

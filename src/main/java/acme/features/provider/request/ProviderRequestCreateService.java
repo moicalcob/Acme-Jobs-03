@@ -1,6 +1,7 @@
 
 package acme.features.provider.request;
 
+import java.util.Collection;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 
 	//Internal state ------------------------------------------------------------
 	@Autowired
-	private ProviderRequestRepository repository;
+	ProviderRequestRepository repository;
 
 
 	//AbstractCreateService<Provider, Request> interface --------------
@@ -43,14 +44,12 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "moment", "deadline", "title");
+		request.unbind(entity, model, "title", "deadline", "text", "reward", "ticker");
 	}
 
 	@Override
 	public Request instantiate(final acme.framework.components.Request<Request> request) {
-		Request result;
-
-		result = new Request();
+		Request result = new Request();
 
 		return result;
 	}
@@ -61,6 +60,17 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 		assert entity != null;
 		assert errors != null;
 
+		boolean isDuplicated = false;
+		String ticker = entity.getTicker();
+		Collection<Request> requests = this.repository.findManyAll();
+
+		for (Request r : requests) {
+			if (r.getTicker() == ticker) {
+				isDuplicated = true;
+				break;
+			}
+		}
+		errors.state(request, isDuplicated, "sticker", "provider.request.form.error.sticker");
 	}
 
 	@Override

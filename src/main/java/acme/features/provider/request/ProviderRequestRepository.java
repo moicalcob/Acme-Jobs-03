@@ -15,7 +15,7 @@ public interface ProviderRequestRepository extends AbstractRepository {
 	@Query("select r from Request r where r.id = ?1")
 	Request findOneById(int id);
 
-	@Query("select r from Request r where r.deadline >= utc_timestamp()")
+	@Query("select r from Request r")
 	Collection<Request> findManyAll();
 
 }

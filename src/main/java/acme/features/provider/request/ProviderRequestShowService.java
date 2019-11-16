@@ -14,7 +14,7 @@ public class ProviderRequestShowService implements AbstractShowService<Provider,
 
 	//Internal state
 	@Autowired
-	private ProviderRequestRepository repository;
+	ProviderRequestRepository repository;
 
 
 	//AbstractShowService<Provider, Request> interface
@@ -35,7 +35,7 @@ public class ProviderRequestShowService implements AbstractShowService<Provider,
 	@Override
 	public Request findOne(final acme.framework.components.Request<Request> request) {
 		assert request != null;
-		Request result = null;
+		Request result = new Request();
 		int id;
 		id = request.getModel().getInteger("id");
 		result = this.repository.findOneById(id);
