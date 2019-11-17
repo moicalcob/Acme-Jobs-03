@@ -70,7 +70,7 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 				break;
 			}
 		}
-		errors.state(request, isDuplicated, "sticker", "provider.request.form.error.sticker");
+		errors.state(request, isDuplicated, "ticker", "provider.request.form.error.ticker");
 	}
 
 	@Override

@@ -14,4 +14,4 @@ provider.request.form.button.update = Update
 provider.request.form.button.delete = Delete
 provider.request.form.button.return = Return
 
-provider.request.form.error.sticker = A request with this sticker already exists
+provider.request.form.error.ticker = A request with this sticker already exists
