@@ -30,6 +30,8 @@
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list" />
 			<acme:menu-suboption code="master.menu.administrator.announcements" action="/administrator/announcement/list" />
+      			<acme:menu-suboption code="master.menu.administrator.announcements.create" action="/administrator/announcement/create"/>
+
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show" />
 			<acme:menu-suboption code="master.menu.administrator.spam-words" action="/administrator/spam-word/list" />
 			<acme:menu-suboption code="master.menu.administrator.banners.commercial-banner" action="/administrator/commercial-banner/list" />
