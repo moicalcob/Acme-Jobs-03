@@ -17,3 +17,4 @@ administrator.spam_word.form.label.englishTranslation = English translation
 administrator.spam_word.form.label.spamThreshold = Spam threshold
 
 administrator.spam_word.form.button.return = Return
+administrator.spam_word.form.button.update = Update
