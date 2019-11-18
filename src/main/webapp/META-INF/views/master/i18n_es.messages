@@ -53,14 +53,26 @@ master.menu.authenticated.company-record= Compañías
 master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.dashboard = Dashboard
-master.menu.administrator.announcements = Todos los anuncios
-master.menu.administrator.announcements.create = Crear anuncios
 master.menu.administrator.spam-words = Palabras spam
+
+master.menu.administrator.announcements = Todos los anuncios
+master.menu.administrator.announcements.create = Crear anuncio
+master.menu.administrator.company_records = Todos los registros de compañía
+master.menu.administrator.company_records.create = Crear registro de compañía
+master.menu.administrator.investor_records = Todos los registros de inversionistas
+master.menu.administrator.investor_records.create = Crear registro de inversionistas
+master.menu.administrator.challenges = Todos los desafíos
+master.menu.administrator.challenges.create = Crear desafío
+
 master.menu.administrator.banners.commercial-banner = Banners comerciales
 master.menu.administrator.banners.commercial-banner.create = Crear banner comercial
 master.menu.administrator.banners.non-commercial-banner = Banners no comerciales
 master.menu.administrator.banners.non-commercial-banner.create = Crear banner no comercial
+master.menu.administrator.investor-record = Inversores
+master.menu.administrator.investor-record.create = Crear inversion
 master.menu.administrator.shutdown = Parar el sistema
+master.menu.administrator.company-record = Compañías
+master.menu.administrator.company-record.create = Crear Compañía
 
 # master.menu.provider ########################################################
 

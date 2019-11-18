@@ -54,14 +54,26 @@ master.menu.authenticated.company-record= Companies
 master.menu.administrator = Administrator
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.dashboard = Dashboard
-master.menu.administrator.announcements = All Announcements
-master.menu.administrator.announcements.create = Create announcements
 master.menu.administrator.spam-words = Spam words
+
+master.menu.administrator.announcements = All announcements
+master.menu.administrator.announcements.create = Create announcement
+master.menu.administrator.company_records = All company records
+master.menu.administrator.company_records.create = Create company record
+master.menu.administrator.investor_records = All investor records
+master.menu.administrator.investor_records.create = Create investor record
+master.menu.administrator.challenges = All challenges
+master.menu.administrator.challenges.create = Create challenge
+
 master.menu.administrator.banners.commercial-banner = Commercial banners
 master.menu.administrator.banners.commercial-banner.create = Create commercial banner
 master.menu.administrator.banners.non-commercial-banner = Non commercial banners
 master.menu.administrator.banners.non-commercial-banner.create = Create non commercial banner
+master.menu.administrator.investor-record = Investor records
+master.menu.administrator.investor-record.create = Create investor record
 master.menu.administrator.shutdown = Shut down
+master.menu.administrator.company-record = Companies
+master.menu.administrator.company-record.create = Create Company
 
 # master.menu.provider ########################################################
 
@@ -69,6 +81,7 @@ master.menu.provider = Provider
 master.menu.provider.favourite-link = Favourite link
 master.menu.provider.request = Request
 master.menu.provider.request.create = Create Request
+
 
 # master.menu.consumer ##########################################################
 
