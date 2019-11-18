@@ -77,7 +77,8 @@ master.menu.administrator.company-record.create = Crear Compañía
 # master.menu.provider ########################################################
 
 master.menu.provider = Proveedor
-master.menu.provider.favourite-link = Enlace favorito
+master.menu.provider.request = Solicitudes
+master.menu.provider.request.create = Crear solicitud
 
 # master.menu.consumer ##########################################################
 
