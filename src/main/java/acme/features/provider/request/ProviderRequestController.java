@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.request;
+package acme.features.provider.request;
 
 import javax.annotation.PostConstruct;
 
@@ -8,23 +8,23 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import acme.entities.requests.Request;
+import acme.entities.roles.Provider;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
-import acme.framework.entities.Authenticated;
 
 @Controller
-@RequestMapping("/authenticated/request/")
-public class AuthenticatedRequestController extends AbstractController<Authenticated, Request> {
+@RequestMapping("/provider/request/")
+public class ProviderRequestController extends AbstractController<Provider, Request> {
 
 	//Internal state
 	@Autowired
-	private AuthenticatedRequestListService		listService;
+	private ProviderRequestListService		listService;
 
 	@Autowired
-	private AuthenticatedRequestShowService		showService;
+	private ProviderRequestShowService		showService;
 
 	@Autowired
-	private AuthenticatedRequestCreateService	createService;
+	private ProviderRequestCreateService	createService;
 
 
 	//Constructors
@@ -33,6 +33,5 @@ public class AuthenticatedRequestController extends AbstractController<Authentic
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 		super.addBasicCommand(BasicCommand.CREATE, this.createService);
-
 	}
 }

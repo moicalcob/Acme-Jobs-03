@@ -12,5 +12,4 @@ authenticated.offer.form.label.deadline = End date
 authenticated.offer.form.label.description = Description
 authenticated.offer.form.label.reward = Reward
 
-
 authenticated.provider.form.button.return = Return

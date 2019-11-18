@@ -13,6 +13,7 @@
 	<acme:form-money code="authenticated.challenge.form.label.silverReward" path="silverReward"/>
 	<acme:form-textarea code="authenticated.challenge.form.label.bronzeGoal" path="bronzeGoal"/>
 	<acme:form-money code="authenticated.challenge.form.label.bronzeReward" path="bronzeReward"/>
+
 	
 	<acme:form-return code="authenticated.challenge.form.button.return"/>
 

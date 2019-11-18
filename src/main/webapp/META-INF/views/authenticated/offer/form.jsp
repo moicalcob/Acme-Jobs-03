@@ -10,6 +10,7 @@
 	<acme:form-textbox code="authenticated.offer.form.label.deadline" path="deadline"/>
 	<acme:form-textbox code="authenticated.offer.form.label.description" path="description"/>
 	<acme:form-textbox code="authenticated.offer.form.label.reward" path="reward"/>
+	
 
 	<acme:form-return code="authenticated.provider.form.button.return"/>
 </acme:form>
