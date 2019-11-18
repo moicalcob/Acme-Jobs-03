@@ -38,6 +38,8 @@
 			<acme:menu-suboption code="master.menu.administrator.banners.commercial-banner.create" action="/administrator/commercial-banner/create" />
 			<acme:menu-suboption code="master.menu.administrator.banners.non-commercial-banner" action="/administrator/non-commercial-banner/list" />
 			<acme:menu-suboption code="master.menu.administrator.banners.non-commercial-banner.create" action="/administrator/non-commercial-banner/create" />
+			<acme:menu-suboption code="master.menu.administrator.investor-record" action="/administrator/investor-record/list"/>
+			<acme:menu-suboption code="master.menu.administrator.investor-record.create" action="/administrator/investor-record/create"/>
 			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown" />
 		</acme:menu-option>
