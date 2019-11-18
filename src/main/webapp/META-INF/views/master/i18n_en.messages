@@ -59,13 +59,13 @@ master.menu.administrator.challenge = Challenges
 master.menu.administrator.challenge.create = Create challenge
 master.menu.administrator.spam-words = Spam words
 
-master.menu.administrator.announcements = All announcements
+master.menu.administrator.announcements = Announcements
 master.menu.administrator.announcements.create = Create announcement
-master.menu.administrator.company_records = All company records
+master.menu.administrator.company_records = Company records
 master.menu.administrator.company_records.create = Create company record
-master.menu.administrator.investor_records = All investor records
+master.menu.administrator.investor_records = Investor records
 master.menu.administrator.investor_records.create = Create investor record
-master.menu.administrator.challenges = All challenges
+master.menu.administrator.challenges = Challenges
 master.menu.administrator.challenges.create = Create challenge
 
 master.menu.administrator.banners.commercial-banner = Commercial banners
