@@ -67,6 +67,8 @@ master.menu.administrator.shutdown = Shut down
 
 master.menu.provider = Provider
 master.menu.provider.favourite-link = Favourite link
+master.menu.provider.request = Request
+master.menu.provider.request.create = Create Request
 
 # master.menu.consumer ##########################################################
 

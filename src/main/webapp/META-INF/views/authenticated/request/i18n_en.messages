@@ -9,4 +9,5 @@ authenticated.request.form.label.text = Description:
 authenticated.request.form.label.reward = Reward:
 authenticated.request.form.label.ticker = Ticker:
 
+authenticated.request.form.buttom.create = Create
 authenticated.request.form.button.return = Return
