@@ -392,24 +392,6 @@ has v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>63</x>
-      <y>490</y>
-      <w>245</w>
-      <h>84</h>
-    </coordinates>
-    <panel_attributes>_Offers_
---
-+ ticker: String(NotBlank)
-+ title: String(NotBlank)
-+ moment: Date {Temporal(TIMESTAMP), Past}
-+ deadline: Date {Temporal(TIMESTAMP), Future}
-+ description: String
-+ money_range: String</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
       <x>175</x>
       <y>266</y>
       <w>245</w>
@@ -420,6 +402,24 @@ has v</panel_attributes>
 + spanishTranslation: String{NotBlank}
 + englishTranslation: String{NotBlank}
 + spanThreshold: Double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>49</x>
+      <y>469</y>
+      <w>245</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>_Offers_
+--
++ ticker: String(NotBlank), Unique
++ title: String(NotBlank)
++ moment: Date {Temporal(TIMESTAMP), Past}
++ deadline: Date {Temporal(TIMESTAMP), Future}
++ description: String
++ money_range: String</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
