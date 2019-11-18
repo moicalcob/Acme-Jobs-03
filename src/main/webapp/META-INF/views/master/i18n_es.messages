@@ -61,6 +61,8 @@ master.menu.administrator.banners.commercial-banner.create = Crear banner comerc
 master.menu.administrator.banners.non-commercial-banner = Banners no comerciales
 master.menu.administrator.banners.non-commercial-banner.create = Crear banner no comercial
 master.menu.administrator.shutdown = Parar el sistema
+master.menu.administrator.company-record = Compañías
+master.menu.administrator.company-record.create = Crear Compañía
 
 # master.menu.provider ########################################################
 
