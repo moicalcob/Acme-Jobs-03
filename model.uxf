@@ -328,7 +328,7 @@ has v</panel_attributes>
     <panel_attributes>Challenges
 --
 + title: String{NotBlank}
-+ deadline: Date {Temporal(TIMESTAMP), Future}
++ deadline: Date {Temporal(TIMESTAMP), Future, NotBlank}
 + description: String{NotBlank}
 + goldGoal: String{NotBlank}
 + goldReward: Money
@@ -420,6 +420,38 @@ has v</panel_attributes>
 + deadline: Date {Temporal(TIMESTAMP), Future}
 + description: String
 + money_range: String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>686</x>
+      <y>581</y>
+      <w>245</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>CommercialBanner
+--
++ picture: String{NotBlank, URL}
++ slogan: String{NotBlank}
++ target: String{NotBlank, URL}
++ creditCard: String{NotBlank}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>462</x>
+      <y>658</y>
+      <w>245</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>NonCommercialBanner
+--
++ picture: String{NotBlank, URL}
++ slogan: String{NotBlank}
++ target: String{NotBlank, URL}
++ jingle: String{URL}</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
