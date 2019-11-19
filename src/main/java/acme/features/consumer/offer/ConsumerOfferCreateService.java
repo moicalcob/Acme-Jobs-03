@@ -71,7 +71,6 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		String ticker = entity.getTicker();
 
 		isDuplicated = this.repository.exist(ticker) == null;
-
 		errors.state(request, isDuplicated, "ticker", "consumer.offer.form.error.ticker");
 
 		isAccepted = request.getModel().getBoolean("accepted");
@@ -82,9 +81,10 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		if (!errors.hasErrors("deadline")) {
 			calendar = new GregorianCalendar();
 			minimumDeadline = calendar.getTime();
-			errors.state(request, entity.getDeadline().after(minimumDeadline), "deadline", "consumer.offer.form.error.deadline");
+			if (entity.getDeadline() != null) {
+				errors.state(request, entity.getDeadline().after(minimumDeadline), "deadline", "consumer.offer.form.error.deadline");
+			}
 		}
-
 	}
 
 	@Override
