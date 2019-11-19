@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import acme.entities.requests.Request;
 import acme.entities.roles.Provider;
 import acme.framework.components.Errors;
+import acme.framework.components.HttpMethod;
 import acme.framework.components.Model;
 import acme.framework.services.AbstractCreateService;
 
@@ -44,6 +45,13 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 		assert model != null;
 
 		request.unbind(entity, model, "title", "deadline", "text", "reward", "ticker");
+
+		if (request.isMethod(HttpMethod.GET)) {
+			model.setAttribute("accepted", false);
+		} else {
+			request.transfer(model, "accepted");
+		}
+
 	}
 
 	@Override
@@ -66,7 +74,6 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 		errors.state(request, isDuplicated, "ticker", "provider.request.form.error.ticker");
 
 		isAccepted = request.getModel().getBoolean("accepted");
-
 		errors.state(request, isAccepted, "accepted", "provider.request.form.error.accepted");
 
 	}
@@ -77,8 +84,8 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 
 		moment = new Date(System.currentTimeMillis() - 1);
 		entity.setMoment(moment);
-		this.repository.save(entity);
 
+		this.repository.save(entity);
 	}
 
 }
