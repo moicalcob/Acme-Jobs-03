@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.offer;
+package acme.features.consumer.offer;
 
 import java.util.Collection;
 
@@ -10,12 +10,15 @@ import acme.entities.offers.Offer;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface AuthenticatedOfferRepository extends AbstractRepository {
+public interface ConsumerOfferRepository extends AbstractRepository {
 
 	@Query("Select o from Offer o where o.id = ?1")
 	Offer findOneById(int id);
 
 	@Query("select o from Offer o where o.deadline >= now()")
 	Collection<Offer> findManyAll();
+
+	@Query("select ticker from Offer where ticker like ?1")
+	String exist(String ticker1);
 
 }

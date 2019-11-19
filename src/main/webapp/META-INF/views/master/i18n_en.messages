@@ -90,6 +90,9 @@ master.menu.provider.request.create = Create Request
 
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
+master.menu.consumer.offer = Offers
+master.menu.consumer.offer.create = Create offer
+
 
 # master.menu.user-account ####################################################
 
