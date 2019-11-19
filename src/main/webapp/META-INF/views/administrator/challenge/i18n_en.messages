@@ -22,6 +22,8 @@ administrator.challenge.form.button.delete = Delete
 administrator.challenge.form.button.create = Create
 administrator.challenge.form.button.return = Return
 
+administrator.challenge.form.error.deadline = You must write a future deadline
+
 administrator.challenge.list.label.deadline = Deadline
 administrator.challenge.list.label.title = Title
 administrator.challenge.list.label.goldGoal = Gold level goal

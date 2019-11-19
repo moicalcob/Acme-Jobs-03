@@ -22,6 +22,8 @@ administrator.challenge.form.button.delete = Eliminar
 administrator.challenge.form.button.create = Crear
 administrator.challenge.form.button.return = Volver
 
+administrator.challenge.form.error.deadline = La fecha límite tiene que ser futura
+
 administrator.challenge.list.label.deadline = Fecha límite
 administrator.challenge.list.label.title = Título
 administrator.challenge.list.label.goldGoal = Objetivo nivel oro
