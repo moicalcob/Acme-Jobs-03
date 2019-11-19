@@ -10,7 +10,7 @@
 	</jstl:if>
 	<acme:form-moment code="provider.request.form.label.deadline" path="deadline" />
 	<acme:form-textarea code="provider.request.form.label.text" path="text" />
-	<acme:form-integer code="provider.request.form.label.reward" path="reward" />
+	<acme:form-money code="provider.request.form.label.reward" path="reward" />
 	<acme:form-textarea code="provider.request.form.label.ticker" path="ticker" />
 	<jstl:if test="${command == 'create'}">
 	<acme:form-checkbox code="provider.request.form.label.checkbox" path="accepted" />

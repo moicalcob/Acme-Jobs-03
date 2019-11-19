@@ -108,7 +108,8 @@
         `deadline` datetime(6),
         `description` varchar(255),
         `moment` datetime(6),
-        `reward` double precision,
+        `reward_amount` double precision,
+        `reward_currency` varchar(255),
         `ticker` varchar(255),
         `title` varchar(255),
         primary key (`id`)
@@ -128,7 +129,8 @@
         `version` integer not null,
         `deadline` datetime(6),
         `moment` datetime(6),
-        `reward` integer,
+        `reward_amount` double precision,
+        `reward_currency` varchar(255),
         `text` varchar(255),
         `ticker` varchar(255),
         `title` varchar(255),
@@ -161,6 +163,7 @@
     ) engine=InnoDB;
 
     insert into `hibernate_sequence` values ( 1 );
+create index IDXnr284tes3x8hnd3h716tmb3fr on `challenge` (`deadline`);
 create index IDXcp4664f36sgqsd0ihmirt0w0 on `offer` (`ticker`);
 create index IDXq2o9psuqfuqmq59f0sq57x9uf on `offer` (`deadline`);
 

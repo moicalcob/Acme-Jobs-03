@@ -8,7 +8,7 @@
 	<acme:form-moment code="authenticated.request.form.label.moment" path="moment" />
 	<acme:form-moment code="authenticated.request.form.label.deadline" path="deadline" />
 	<acme:form-textarea code="authenticated.request.form.label.text" path="text" />
-	<acme:form-textarea code="authenticated.request.form.label.reward" path="reward" />
+	<acme:form-money code="authenticated.request.form.label.reward" path="reward" />
 	<acme:form-textarea code="authenticated.request.form.label.ticker" path="ticker" />
 	
 	<acme:form-submit test="${command == 'create'}"

@@ -22,7 +22,7 @@ javax.validation.constraints.NotEmpty.message = Must not be empty
 javax.validation.constraints.NotNull.message = May not be null
 javax.validation.constraints.Null.message = Must be null
 javax.validation.constraints.Past.message = Must be in the past
-javax.validation.constraints.Pattern.message = Must match pattern "{regexp}"
+javax.validation.constraints.Pattern.message = Must match pattern
 javax.validation.constraints.Size.message = Must have between {min} and {max} items
 
 org.hibernate.validator.constraints.CreditCardNumber.message = Invalid credit card number
@@ -37,7 +37,7 @@ acme.validation.decimal-min = Must be greater than or equal to {0}
 acme.validation.digits = Must have {0} digits and {1} decimals
 acme.validation.max = Must be less than or equal to {0}
 acme.validation.min = Must be greater than or equal to {0}
-acme.validation.pattern = Must match pattern "{0}"
+acme.validation.pattern = Must match pattern
 acme.validation.length = Length must be between {0} and {1}
 acme.validation.range = Must be between {0} and {1}
 acme.validation.script = Script expression "{0}" must return true

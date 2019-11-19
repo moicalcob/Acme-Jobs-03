@@ -20,28 +20,28 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("select count(*) from InvestorRecord")
 	Integer findManyAllInvestorRecord();
 
-	@Query("select AVG(reward) from Request")
+	@Query("select AVG(reward.amount) from Request")
 	Double findAverageRewardsRequest();
 
-	@Query("select MAX(reward) from Request")
+	@Query("select MAX(reward.amount) from Request")
 	Double findMaximumRewardsRequest();
 
-	@Query("select MIN(reward) from Request")
+	@Query("select MIN(reward.amount) from Request")
 	Double findMinimumRewardsRequest();
 
-	@Query("select STDDEV(reward) from Request")
+	@Query("select STDDEV(reward.amount) from Request")
 	Double findStandardDeviationRewardsRequest();
 
-	@Query("select AVG(reward) from Offer")
+	@Query("select AVG(reward.amount) from Offer")
 	Double findAverageOfRewardsOffers();
 
-	@Query("select MAX(reward) from Offer")
+	@Query("select MAX(reward.amount) from Offer")
 	Double findMaximumOfRewardsOffers();
 
-	@Query("select MIN(reward) from Offer")
+	@Query("select MIN(reward.amount) from Offer")
 	Double findMinimumOfRewardsOffers();
 
-	@Query("select STDDEV(reward) from Offer")
+	@Query("select STDDEV(reward.amount) from Offer")
 	Double findStandardDeviationRewardsOffers();
 
 	@Query("select c.sector, count(c) from CompanyRecord c group by c.sector")

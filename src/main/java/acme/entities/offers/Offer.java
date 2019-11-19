@@ -9,10 +9,13 @@ import javax.persistence.Index;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
+import acme.framework.datatypes.Money;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -44,12 +47,15 @@ public class Offer extends DomainEntity {
 	private Date				moment;
 
 	@Temporal(TemporalType.TIMESTAMP)
+	@NotNull
 	private Date				deadline;
 
 	@NotBlank
 	private String				description;
 
-	private Double				reward;
+	@Valid
+	@NotNull
+	private Money				reward;
 
 	// Derived attributes -----------------------------------------------------
 

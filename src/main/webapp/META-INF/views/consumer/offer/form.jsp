@@ -11,7 +11,7 @@
 	</jstl:if>
 	<acme:form-moment code="consumer.offer.form.label.deadline" path="deadline"/>
 	<acme:form-textbox code="consumer.offer.form.label.description" path="description"/>
-	<acme:form-double code="consumer.offer.form.label.reward" path="reward"/>
+	<acme:form-money code="consumer.offer.form.label.reward" path="reward"/>
 	
 	<jstl:if test="${command == 'create'}">
 		<acme:form-checkbox code="consumer.offer.form.label.checkbox" path="accepted" />
