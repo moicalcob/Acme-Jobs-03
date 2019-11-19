@@ -5,7 +5,7 @@ administrator.investor-record.form.label.stars = Estrellas:
 administrator.investor-record.form.buttom.return = Volver
 administrator.investor-record.form.buttom.update = Actualizar
 administrator.investor-record.form.buttom.delete = Eliminar
-administrator.investor-record.form.buttom.create = Create
+administrator.investor-record.form.buttom.create = Crear
 
 
 administrator.investor-record.list.label.investorName = Nombre del inversor:

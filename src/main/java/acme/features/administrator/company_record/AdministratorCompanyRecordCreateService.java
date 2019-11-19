@@ -62,6 +62,9 @@ public class AdministratorCompanyRecordCreateService implements AbstractCreateSe
 
 	@Override
 	public void create(final Request<CompanyRecord> request, final CompanyRecord entity) {
+		if (entity.getIncorporated() == null) {
+			entity.setIncorporated(false);
+		}
 		this.repository.save(entity);
 	}
 
