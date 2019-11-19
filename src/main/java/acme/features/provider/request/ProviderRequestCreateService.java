@@ -1,7 +1,6 @@
 
 package acme.features.provider.request;
 
-import java.util.Collection;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,16 +59,11 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 		assert entity != null;
 		assert errors != null;
 
-		boolean isDuplicated = false;
+		boolean isDuplicated;
 		String ticker = entity.getTicker();
-		Collection<Request> requests = this.repository.findManyAll();
 
-		for (Request r : requests) {
-			if (r.getTicker() == ticker) {
-				isDuplicated = true;
-				break;
-			}
-		}
+		isDuplicated = this.repository.exist(ticker) == null;
+
 		errors.state(request, isDuplicated, "ticker", "provider.request.form.error.ticker");
 	}
 

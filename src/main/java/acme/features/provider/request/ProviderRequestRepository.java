@@ -18,4 +18,6 @@ public interface ProviderRequestRepository extends AbstractRepository {
 	@Query("select r from Request r")
 	Collection<Request> findManyAll();
 
+	@Query("select ticker from Request where ticker like ?1")
+	String exist(String ticker1);
 }
