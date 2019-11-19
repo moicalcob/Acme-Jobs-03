@@ -59,12 +59,16 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 		assert entity != null;
 		assert errors != null;
 
-		boolean isDuplicated;
+		boolean isDuplicated, isAccepted;
 		String ticker = entity.getTicker();
 
 		isDuplicated = this.repository.exist(ticker) == null;
-
 		errors.state(request, isDuplicated, "ticker", "provider.request.form.error.ticker");
+
+		isAccepted = request.getModel().getBoolean("accepted");
+
+		errors.state(request, isAccepted, "accepted", "provider.request.form.error.accepted");
+
 	}
 
 	@Override
