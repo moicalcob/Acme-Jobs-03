@@ -11,8 +11,10 @@ consumer.offer.form.label.moment = Creation date
 consumer.offer.form.label.deadline = End date
 consumer.offer.form.label.description = Description
 consumer.offer.form.label.reward = Reward
+consumer.offer.form.label.checkbox = Confirm creation
 
 consumer.provider.form.button.return = Return
 
 consumer.offer.form.error.ticker = An offer with this ticker already exists
 consumer.offer.form.error.deadline = The deadline must be in future
+consumer.offer.form.error.accepted = You have to confirm

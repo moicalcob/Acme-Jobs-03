@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import acme.entities.offers.Offer;
 import acme.entities.roles.Consumer;
 import acme.framework.components.Errors;
+import acme.framework.components.HttpMethod;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.services.AbstractCreateService;
@@ -45,6 +46,12 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert model != null;
 
 		request.unbind(entity, model, "title", "deadline", "description", "reward", "ticker");
+
+		if (request.isMethod(HttpMethod.GET)) {
+			model.setAttribute("accepted", false);
+		} else {
+			request.transfer(model, "accepted");
+		}
 	}
 
 	@Override
@@ -60,12 +67,15 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert entity != null;
 		assert errors != null;
 
-		boolean isDuplicated;
+		boolean isDuplicated, isAccepted;
 		String ticker = entity.getTicker();
 
 		isDuplicated = this.repository.exist(ticker) == null;
 
 		errors.state(request, isDuplicated, "ticker", "consumer.offer.form.error.ticker");
+
+		isAccepted = request.getModel().getBoolean("accepted");
+		errors.state(request, isAccepted, "accepted", "consumer.offer.form.error.accepted");
 
 		Calendar calendar;
 		Date minimumDeadline;

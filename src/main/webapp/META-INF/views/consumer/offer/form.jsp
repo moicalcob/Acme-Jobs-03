@@ -13,6 +13,10 @@
 	<acme:form-textbox code="consumer.offer.form.label.description" path="description"/>
 	<acme:form-double code="consumer.offer.form.label.reward" path="reward"/>
 	
+	<jstl:if test="${command == 'create'}">
+		<acme:form-checkbox code="consumer.offer.form.label.checkbox" path="accepted" />
+	</jstl:if>
+	
 	<acme:form-submit test="${command == 'create'}"
 		code="provider.request.form.button.create" 
 		action="/consumer/offer/create"/>
