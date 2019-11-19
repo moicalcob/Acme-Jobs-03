@@ -8,6 +8,7 @@ provider.request.form.label.deadline = Deadline:
 provider.request.form.label.text = Description:
 provider.request.form.label.reward = Reward:
 provider.request.form.label.ticker = Ticker:
+provider.request.form.label.checkbox = I do accept the creation
 
 provider.request.form.button.create = Create
 provider.request.form.button.update = Update
@@ -15,3 +16,4 @@ provider.request.form.button.delete = Delete
 provider.request.form.button.return = Return
 
 provider.request.form.error.ticker = A request with this sticker already exists
+provider.request.form.error.accepted = You must confirm the creation
